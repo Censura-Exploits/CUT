@@ -1,27 +1,6 @@
 #!/bin/sh
 
 . usr/local/CUT/common.sh
-
-payloads () {
-  local run=true
-  while $run; do
-    clear
-    logo 
-    echo "Payloads"
-    sel=$(
-    selectorLoop 1 \
-      "Enrollment" \
-      "Misc."
-  )
-    
-    case $sel in
-      1) enrollment;;
-      2) misc;;
-      *) run=false
-    esac
-  done
-}
-
 enrollment () {
   local run=true
   while $run; do 
